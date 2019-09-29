@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>问答社区</title>
+    <title>发布问题</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css"/>
 
 </head>
-<body>
+<body style="background-color:#e5e5e5">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -41,6 +41,43 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+
 </nav>
+<div class="container-fluid" style="margin: 20px;background-color: white;height: 100%">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" >
+            <h2><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>发起</h2>
+            <div class="subform" style="margin-top: 10px;">
+                <form action="">
+                    <div class="form-group" >
+                        <label for="title">问题描述（简单扼要）:</label>
+                        <input type="text" class="form-control" placeholder="问题标题..." id="title" name="title" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="form-group">
+                        <label for="describe">问题补充（必填，请参照右侧提示）:</label>
+                        <textarea id="describe" class="form-control" cols="30" rows="10" name="describe"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tag">添加标签</label>
+                        <input type="text" id="tag" class="form-control" name="tag" placeholder="请输入标签，以逗号隔开">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" style="float: right;margin-bottom: 15px;">发布</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>问题发起指南</h3>
+            <ul>
+                <li>问题标题：请用精简的语言描述您发布的问题，不超过25字</li>
+                <li>问题补充：详细补充您的问题内容，并确保问题描述清晰直观，并提供一些相关的资料</li>
+                <li>选择标题：选择一个或者多个合适的标签，用逗号隔开，每个标签不超过10个字</li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
